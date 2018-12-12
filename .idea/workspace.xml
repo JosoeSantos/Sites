@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="146971db-b018-4552-b199-480ee293bf25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/DAO/DAO.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/DAO/ProductDAO.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/DatabaseManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/model/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estoque/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="146971db-b018-4552-b199-480ee293bf25" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,14 +63,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="2384" />
+          <entry key="php" value="2388" />
           <entry key="sql" value="23" />
           <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="2382" />
+          <entry key="PHP" value="2386" />
           <entry key="PLAIN_TEXT" value="25" />
           <entry key="SQL" value="25" />
         </counts>
@@ -133,8 +125,8 @@
       <file pinned="true" current-in-tab="true">
         <entry file="remoteDeploymentFS://&lt;bb309558-b4f7-4113-a4ad-b5171e5e9775&gt;/C:\xampp\htdocs\erphub\estoque\index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="114">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -255,12 +247,12 @@
       <updated>1544531598320</updated>
       <workItem from="1544531601726" duration="3885000" />
       <workItem from="1544568520672" duration="1930000" />
-      <workItem from="1544616247916" duration="5374000" />
+      <workItem from="1544616247916" duration="5628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11189000" />
+    <option name="totallyTimeSpent" value="11443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
