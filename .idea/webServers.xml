@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bb309558-b4f7-4113-a4ad-b5171e5e9775" name="localhost" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\erphub" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
