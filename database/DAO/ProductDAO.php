@@ -6,9 +6,8 @@
  * Time: 11:54
  */
 
-
-include_once ("../model");
-include_once ("../DatabaseManager.php");
+include '../model/Product.php';
+include '../DatabaseManager.php';
 
 class ProductDAO extends DatabaseManager {
 

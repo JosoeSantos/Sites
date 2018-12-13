@@ -5,7 +5,6 @@
  * Date: 11/12/2018
  * Time: 11:52
  */
-
 class Product {
     private $code;
     private $name;

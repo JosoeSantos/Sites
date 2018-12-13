@@ -6,7 +6,7 @@
  * Time: 15:04
  */
 
-include_once ("../database/DAO/ProductDAO.php");
+include'../database/DAO/ProductDAO.php';
 
 $dao = new ProductDAO();
 

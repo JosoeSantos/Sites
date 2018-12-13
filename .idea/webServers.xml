@@ -5,6 +5,14 @@
       <webServer id="bb309558-b4f7-4113-a4ad-b5171e5e9775" name="localhost" url="http://localhost">
         <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\erphub" accessType="MOUNT" />
       </webServer>
+      <webServer id="08f1a407-945b-4c6a-a0b1-89e2d774baa6" name="ftp" url="http://josoe-cf.umbler.net">
+        <fileTransfer host="josoe-cf.umbler.net" port="21" accessType="FTPS">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
