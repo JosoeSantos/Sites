@@ -5,9 +5,9 @@
  * Date: 11/12/2018
  * Time: 11:54
  */
+define('ROOT_PATH', dirname(__DIR__));
 
-include '../model/Product.php';
-include '../DatabaseManager.php';
+include_once ROOT_PATH."/DatabaseManager.php";
 
 class ProductDAO extends DatabaseManager {
 
@@ -21,7 +21,10 @@ class ProductDAO extends DatabaseManager {
 
     function insert(Product $MODEL) {
         $stmt = $this->conn->prepare("INSERT INTO products(name, `desc`, price) VALUES (?,?,?)");
-        $stmt->bind_param('ssd', $MODEL->getName(), $MODEL->getDesc(), $MODEL->getPrice());
+        $name = $MODEL->getName();
+        $desc = $MODEL->getDesc();
+        $price = $MODEL->getPrice();
+        $stmt->bind_param('ssd', $name, $desc, $price);
         if ($stmt->execute()) {
             $MODEL->setCode($this->conn->insert_id);
             $stmt->close();
@@ -53,7 +56,11 @@ class ProductDAO extends DatabaseManager {
 
     function update(Product $MODEL) {
         $stmt = $this->conn->prepare("UPDATE products  SET `name`=? ,`desc`=?, price=? WHERE prodct_code=? ;");
-        $stmt->bind_param('ssdi', $MODEL->getName(), $MODEL->getDesc(), $MODEL->getPrice(), $MODEL->getCode());
+        $id = $MODEL->getCode();
+        $name = $MODEL->getName();
+        $desc = $MODEL->getDesc();
+        $price = $MODEL->getPrice();
+        $stmt->bind_param('ssdi', $name, $desc, $price,$id);
         if ($stmt->execute()) {
             $stmt->close();
             return $MODEL;

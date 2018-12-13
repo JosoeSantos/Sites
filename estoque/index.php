@@ -6,7 +6,8 @@
  * Time: 15:04
  */
 
-include'../database/DAO/ProductDAO.php';
+include '../database/model/Product.php';
+include '../database/DAO/ProductDAO.php';
 
 $dao = new ProductDAO();
 
@@ -15,11 +16,16 @@ if (isset($_POST)) {
         (isset($_POST["desc"]) && !empty($_POST["desc"])) &&
         (isset($_POST["price"]) && !empty($_POST["price"]))
     ) {
-        $mod = new Product($_POST["name"],$_POST["desc"], $_POST["price"]);
+        $mod = new Product($_POST["name"], $_POST["desc"], $_POST["price"]);
         $r = $dao->insert($mod);
-        if(!$r){
+        if (!$r) {
             $r = 500;
+            json_encode(array("status" => $r));
+        } else {
+            echo json_encode(array("code" => $r->getCode(), "name" => $r->getName(), "desc" => $r->getDesc(), "price" => $r->getPrice()));
         }
-        json_encode(array("status" => $r));
+    } else{
+        echo json_encode(array("status" => "400"));
+
     }
 }
