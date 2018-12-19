@@ -7,7 +7,7 @@
  */
 define('ROOT_PATH', dirname(__DIR__));
 
-include_once ROOT_PATH."/DatabaseManager.php";
+include_once ROOT_PATH . "/DatabaseManager.php";
 
 class ProductDAO extends DatabaseManager {
 
@@ -15,6 +15,7 @@ class ProductDAO extends DatabaseManager {
     /**
      * ProductDAO constructor.
      */
+
     public function __construct() {
         parent::__construct();
     }
@@ -27,13 +28,11 @@ class ProductDAO extends DatabaseManager {
         $stmt->bind_param('ssd', $name, $desc, $price);
         if ($stmt->execute()) {
             $MODEL->setCode($this->conn->insert_id);
-            $stmt->close();
             return $MODEL;
         } else {
             $t = date("d/m/y h:m:s");
             self::log("INSERT ON PRODUCTS ({$t}):");
             self::log($this->conn->error);
-            $stmt->close();
             return 0;
         }
     }
@@ -60,21 +59,19 @@ class ProductDAO extends DatabaseManager {
         $name = $MODEL->getName();
         $desc = $MODEL->getDesc();
         $price = $MODEL->getPrice();
-        $stmt->bind_param('ssdi', $name, $desc, $price,$id);
+        $stmt->bind_param('ssdi', $name, $desc, $price, $id);
         if ($stmt->execute()) {
-            $stmt->close();
             return $MODEL;
         } else {
             $t = date("d/m/y h:m:s");
             self::log("UPDATE ON PRODUCTS ({$t}):");
             self::log($this->conn->error);
-            $stmt->close();
             return 0;
         }
     }
 
     function selectAll() {
-        $r = $this->conn->query("SELECT * FROM products");
+        $r = $this->conn->query("SELECT prodct_code as 'code', price,`desc`,name FROM products");
         if (!$r) {
             $t = date("d/m/y h:m:s");
             self::log("SELECT ON PRODUCTS ({$t}):");
@@ -84,7 +81,7 @@ class ProductDAO extends DatabaseManager {
     }
 
     function selectItem($id) {
-        $r = "SELECT * FROM products WHERE prodct_code={$id}";
+        $r = $this->conn->query("SELECT prodct_code as 'code',`desc`,name, price FROM products WHERE prodct_code={$id}");
         if (!$r) {
             $t = date("d/m/y h:m:s");
             self::log("SELECT id ON PRODUCTS ({$t}):");

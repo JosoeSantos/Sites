@@ -22,7 +22,7 @@ class DatabaseManager {
      * @param string $user
      * @param string $password
      */
-    public function __construct($host = "localhost", $database = "aw2", $user = "root", $password = "") {
+    public function __construct($host = "127.0.0.1", $database = "aw2", $user = "root", $password = "") {
         $this->host = $host;
         $this->database = $database;
         $this->user = $user;
